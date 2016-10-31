@@ -14,7 +14,6 @@ import java.io.PrintWriter;
 /* takes input and passes it to function (DONE)
  * function splits input, comma is delimiter ()
  * function counts lines and adds to count
- * 
  */
 
 public class Base {
@@ -27,12 +26,11 @@ public class Base {
 		Scanner s = new Scanner(System.in);
 		in = s.nextLine();
 		
-		String[] userInput = splitInput(in);
-		
+		String[] userInput = splitInput(in);	
 		for (String path : userInput) {
 			try {
 				System.out.println("Path = " + path);
-				count += countLines(in);
+				count += countLines(path);
 			} catch (FileNotFoundException e) {
 				System.out.println("file " + path + " not found. Moving on to next file");
 			}
